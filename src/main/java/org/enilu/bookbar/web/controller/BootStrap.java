@@ -1,4 +1,4 @@
-package org.enilu.bookbar.web;
+package org.enilu.bookbar.web.controller;
 
 import java.io.File;
 import java.util.ResourceBundle;
@@ -18,7 +18,7 @@ import org.nutz.mvc.ioc.provider.ComboIocProvider;
  * 
  */
 
-@Modules(packages = { "org.nlpchina.web.controller" }, scanPackage = true)
+@Modules(packages = { "org.enilu.bookbar.web.controller" }, scanPackage = true)
 @IocBy(type = ComboIocProvider.class, args = {
 		"*org.nutz.ioc.loader.json.JsonLoader", "ioc.js",
 		"*org.nutz.ioc.loader.annotation.AnnotationIocLoader" })
