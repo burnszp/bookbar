@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="main">
-	 	<a href="/mgr/product-list/">产品列表</a>
+	 	<a href="/admin/collector-list/">采集配置列表</a>
 	</div>
 	 
 </body>

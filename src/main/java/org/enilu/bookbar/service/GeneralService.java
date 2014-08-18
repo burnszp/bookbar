@@ -28,7 +28,7 @@ import org.nutz.ioc.loader.annotation.IocBean;
 /**
  * 基本数据库操作类
  * 
- * @author Administrator
+ * @author enilu
  */
 @IocBean
 public class GeneralService {
@@ -137,7 +137,8 @@ public class GeneralService {
 	 *            desc排序的条件
 	 * @return List
 	 */
-	public <T> List<T> searchByPage(Class<T> c, int currentPage, int pageSize, String orderby) {
+	public <T> List<T> searchByPage(Class<T> c, int currentPage, int pageSize,
+			String orderby) {
 		Pager pager = dao.createPager(currentPage, pageSize);
 
 		return dao.query(c, Cnd.orderBy().desc(orderby), pager);
@@ -157,7 +158,8 @@ public class GeneralService {
 	 *            每页显示的数据量
 	 * @return List
 	 */
-	public <T> List<T> searchByPage(Class<T> c, Condition condition, int currentPage, int pageSize) {
+	public <T> List<T> searchByPage(Class<T> c, Condition condition,
+			int currentPage, int pageSize) {
 		Pager pager = dao.createPager(currentPage, pageSize);
 
 		return dao.query(c, condition, pager);
@@ -269,7 +271,8 @@ public class GeneralService {
 
 		String id = entity.getIdField().getColumnName();
 
-		String sql = " " + id + " in (" + ids + ") order by " + orderby + " desc";
+		String sql = " " + id + " in (" + ids + ") order by " + orderby
+				+ " desc";
 
 		return dao.query(c, Cnd.wrap(sql), null);
 
@@ -311,7 +314,8 @@ public class GeneralService {
 
 		String id = entity.getIdField().getColumnName();
 
-		Sql sql = Sqls.create("delete from " + table + " where " + id + " in(" + ids + ")");
+		Sql sql = Sqls.create("delete from " + table + " where " + id + " in("
+				+ ids + ")");
 		dao.execute(sql);
 	}
 
@@ -343,7 +347,8 @@ public class GeneralService {
 	 *            每页数据量
 	 * @return List
 	 */
-	public <T> List<T> searchByPage(Class<T> c, String fieldName, String value, int currentPage, int pageSize) {
+	public <T> List<T> searchByPage(Class<T> c, String fieldName, String value,
+			int currentPage, int pageSize) {
 		Entity<T> entity = dao.getEntity(c);
 
 		String column = entity.getField(fieldName).getColumnName();
@@ -505,7 +510,8 @@ public class GeneralService {
 	 *            更新的条件
 	 * @return true 成功,false 失败
 	 */
-	public <T> boolean updateRelation(Class<T> c, String fieldName, Chain chain, Condition condition) {
+	public <T> boolean updateRelation(Class<T> c, String fieldName,
+			Chain chain, Condition condition) {
 		return dao.updateRelation(c, fieldName, chain, condition) > 0;
 	}
 
@@ -543,7 +549,9 @@ public class GeneralService {
 	 *            每页显示数据
 	 * @return
 	 */
-	public <T> List<T> searchByRelation(Class<T> c, String joinTabel, String cloumnName, Condition condition, SqlExpressionGroup group, String orderby, int currentPage, int pageSize) {
+	public <T> List<T> searchByRelation(Class<T> c, String joinTabel,
+			String cloumnName, Condition condition, SqlExpressionGroup group,
+			String orderby, int currentPage, int pageSize) {
 		Entity<T> entity = dao.getEntity(c);
 
 		List<Record> records = dao.query(joinTabel, condition, null);
@@ -559,7 +567,8 @@ public class GeneralService {
 
 		Pager pager = dao.createPager(currentPage, pageSize);
 
-		SqlExpression e = Cnd.exp(entity.getIdField().getColumnName(), "in", Castors.me().castTo(ids, int[].class));
+		SqlExpression e = Cnd.exp(entity.getIdField().getColumnName(), "in",
+				Castors.me().castTo(ids, int[].class));
 
 		ids = null;
 
@@ -583,7 +592,8 @@ public class GeneralService {
 	 *            排序方式
 	 * @return
 	 */
-	public <T> int searchCount(Class<T> c, String joinTabel, String cloumnName, Condition condition, SqlExpressionGroup group, String orderby) {
+	public <T> int searchCount(Class<T> c, String joinTabel, String cloumnName,
+			Condition condition, SqlExpressionGroup group, String orderby) {
 		Entity<T> entity = dao.getEntity(c);
 
 		List<Record> records = dao.query(joinTabel, condition, null);
@@ -597,7 +607,8 @@ public class GeneralService {
 			return 0;
 		}
 
-		SqlExpression e = Cnd.exp(entity.getIdField().getColumnName(), "in", Castors.me().castTo(ids, int[].class));
+		SqlExpression e = Cnd.exp(entity.getIdField().getColumnName(), "in",
+				Castors.me().castTo(ids, int[].class));
 
 		group = group.and(e);
 
@@ -674,7 +685,8 @@ public class GeneralService {
 		Sql sql = Sqls.create(sqlStr);
 		dao.execute(sql.setCallback(new SqlCallback() {
 			@Override
-			public List<Record> invoke(Connection conn, ResultSet rs, Sql sql) throws SQLException {
+			public List<Record> invoke(Connection conn, ResultSet rs, Sql sql)
+					throws SQLException {
 				// TODO Auto-generated method stub
 				List<Record> result = new ArrayList<Record>();
 				while (rs.next()) {

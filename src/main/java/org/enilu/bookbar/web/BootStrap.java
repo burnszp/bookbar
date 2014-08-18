@@ -1,4 +1,4 @@
-package org.enilu.bookbar.web.controller;
+package org.enilu.bookbar.web;
 
 import java.io.File;
 import java.util.ResourceBundle;
@@ -21,10 +21,9 @@ import org.nutz.mvc.ioc.provider.ComboIocProvider;
 @Modules(packages = { "org.enilu.bookbar.web.controller" }, scanPackage = true)
 @IocBy(type = ComboIocProvider.class, args = {
 		"*org.nutz.ioc.loader.json.JsonLoader", "ioc.js",
-		"*org.nutz.ioc.loader.annotation.AnnotationIocLoader" })
+		"*org.nutz.ioc.loader.annotation.AnnotationIocLoader",
+		"org.enilu.bookbar" })
 @Encoding(input = "UTF-8", output = "UTF-8")
-// @SetupBy(SiteSetup.class)
-// @Filters({ @By(type = SiteFilter.class), @By(type = AuthorFilter.class) })
 public class BootStrap {
 	private static Server server;
 
@@ -34,7 +33,6 @@ public class BootStrap {
 
 		if (bundle.containsKey("web_dir")) {
 			web_dir = bundle.getString("web_dir");
-			;
 		} else if (new File("src/main/webapp").isDirectory()) {
 			web_dir = "src/main/webapp";
 		} else if (new File("webapp").isDirectory()) {

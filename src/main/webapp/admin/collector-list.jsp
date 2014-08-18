@@ -10,8 +10,8 @@
 </head>
 <body>
 	<div class="main">
-		<c:forEach items="${productList}" var="product">
-			${product.pname}:${product.price}<br>
+		<c:forEach items="${obj}" var="item">
+			<a href="${item.url}" target="_blank">${item.name}</a>&nbsp;&nbsp;&nbsp;${item.collector}<br>
 		</c:forEach>
 	</div>
 	 

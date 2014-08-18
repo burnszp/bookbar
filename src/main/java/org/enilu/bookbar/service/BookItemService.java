@@ -2,21 +2,21 @@ package org.enilu.bookbar.service;
 
 import java.util.List;
 
-import org.enilu.bookbar.entity.Product;
+import org.enilu.bookbar.entity.BookItem;
 import org.nutz.dao.Cnd;
 import org.nutz.dao.Dao;
 import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 
 /**
- * 文档数据库操作
+ * 书籍采集来源service
  * 
- * @author Administrator
+ * @author enilu
  * 
  */
 
 @IocBean
-public class ProductService {
+public class BookItemService {
 
 	@Inject
 	protected Dao dao;
@@ -32,8 +32,9 @@ public class ProductService {
 	 * @param pager
 	 * @return
 	 */
-	public List<Product> query() {
-		List<Product> result = generalService.search(Product.class, Cnd.NEW());
+	public List<BookItem> query() {
+		List<BookItem> result = generalService
+				.search(BookItem.class, Cnd.NEW());
 		return result;
 
 	}
