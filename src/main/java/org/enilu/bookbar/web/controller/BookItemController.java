@@ -23,7 +23,7 @@ public class BookItemController {
 	 * @param pager
 	 */
 	@At("/admin/collector-list/")
-	@Ok("jsp:/admin/collector-list.jsp")
+	@Ok("jsp:/page/admin/collector-list.jsp")
 	public List<BookItem> productList(HttpServletRequest request) {
 
 		List<BookItem> list = bookItemService.query();
