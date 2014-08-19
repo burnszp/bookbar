@@ -57,6 +57,8 @@ public class BootStrap {
 		server.setStopAtShutdown(true);
 		server.setSendServerVersion(false);
 		server.start();
+
+		// QuartzStart.start();
 		server.join();
 
 	}

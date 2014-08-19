@@ -25,7 +25,6 @@ public class BookItemController {
 	@At("/admin/collector-list/")
 	@Ok("jsp:/page/admin/collector-list.jsp")
 	public List<BookItem> productList(HttpServletRequest request) {
-
 		List<BookItem> list = bookItemService.query();
 		return list;
 	}

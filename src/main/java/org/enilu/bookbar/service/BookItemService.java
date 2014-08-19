@@ -4,39 +4,28 @@ import java.util.List;
 
 import org.enilu.bookbar.entity.BookItem;
 import org.nutz.dao.Cnd;
-import org.nutz.dao.Dao;
-import org.nutz.ioc.loader.annotation.Inject;
 import org.nutz.ioc.loader.annotation.IocBean;
 
 /**
- * 书籍采集来源service
+ * 书籍采集器service
  * 
- * @author enilu
+ * <p/>
+ * 2014年8月16日
+ * 
+ * @author enilu(82552623@qq.com)
  * 
  */
 
 @IocBean
-public class BookItemService {
-
-	@Inject
-	protected Dao dao;
-
-	@Inject
-	protected GeneralService generalService;
+public class BookItemService extends GeneralService {
 
 	/**
-	 * 根据用户id返回其多页文档
+	 * 查询全部采集器信息
 	 * 
-	 * @param authorId
-	 * @param order
-	 * @param pager
 	 * @return
 	 */
 	public List<BookItem> query() {
-		List<BookItem> result = generalService
-				.search(BookItem.class, Cnd.NEW());
-		return result;
-
+		return search(BookItem.class, Cnd.NEW());
 	}
 
 }

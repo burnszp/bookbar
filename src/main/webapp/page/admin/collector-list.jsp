@@ -4,17 +4,17 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>首页</title>
+<title>采集器管理</title>
 </head>
 <body flag="admin">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-			<ol class="breadcrumb">
-  <li><a href="/${ctx}">主页</a></li>
-  <li><a href="/${ctx}/admin/collector-list">后台管理</a></li>
-  <li class="active">采集器</li>
-  <div style="float:right;margin-top:-6px;">
+				<ol class="breadcrumb">
+					<li><a href="/${ctx}">主页</a></li>
+					<li><a href="/${ctx}/admin/collector-list">后台管理</a></li>
+					<li class="active">采集器</li>
+					<div style="float: right; margin-top: -6px;">
 						<select name="info" class="mbn" style="display: none;">
 							<optgroup label="">
 								<option value="0" selected="selected">采集器</option>
@@ -28,20 +28,17 @@
 							</optgroup>
 						</select>
 					</div>
-  
-</ol>
+
+				</ol>
 
 			</div>
-			</div>
-		<br>
+		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-info">
 					<div class="panel-heading">
-						<div style="display: inline;">
-							采集器列表
-						</div>
-						<div style="display: inline; float: right;margin-top:-5px;">
+						<div style="display: inline;">采集器列表</div>
+						<div style="display: inline; float: right; margin-top: -5px;">
 							<div class="dropdown">
 								<button class="btn btn-primary dropdown-toggle"
 									data-toggle="dropdown">

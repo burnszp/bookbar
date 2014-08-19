@@ -23,7 +23,7 @@ bookbar 书吧
 	2，更改ioc.js中数据库配置
 	3，运行BootStrap.java启动项目，访问地址：http://localhost:8080	
  	
- 
+
 文档下载
 --------
 --
