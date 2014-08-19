@@ -9,7 +9,7 @@ var ioc = {
         },
         fields : {
             driverClassName : "com.mysql.jdbc.Driver",
-            url             : "jdbc:mysql://localhost:3306/eshop",
+            url             : "jdbc:mysql://localhost:3306/bookbar",
             username        : "root",
             password        : "root",
             initialSize     : 10,

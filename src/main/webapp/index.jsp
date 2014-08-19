@@ -1,16 +1,18 @@
 <%@page language="java" pageEncoding="UTF-8"%>
-<%@include file="/common/taglibs.jsp"%>
-<!doctype html>
-<html lang="cn">
+<%@include file="page/common/common.jsp"%>
+
+<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width">
+<title>首页</title> 
 </head>
-<body>
-	<div class="main">
-	 	<a href="/mgr/product-list/">产品列表</a>
-	</div>
-	 
+<body flag="index">
+<div class="container-fluid">
+ <div class="row">
+ 	<div class="col-md-12">
+ 	welcome!!!
+ 	</div>
+ </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,2 @@
+insert into book_item(name,url,collector,website) values('小说','http://bang.dangdang.com/books/bestsellers/01.03.00.00.00.00-recent30-0-0-1-{page}','org.enilu.bookbar.collector.DangdangCollector','当当网');
+insert into book_item(name,url,collector,website) values('休闲爱好','http://bang.dangdang.com/books/bestsellers/01.04.00.00.00.00-recent30-0-0-1-{page}','org.enilu.bookbar.collector.DangdangCollector','当当网');
