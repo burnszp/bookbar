@@ -12,7 +12,13 @@ bookbar 书吧
 -----------------
 	1，	nutz，使用nutz做基本的框架，用作dao，mvc
 	2，	jsoup，使用jsoup负责进行信息抓取
+	3，	使用jetty做为内置服务器	
 
+快速使用：
+-----------------
+	1，	在mysql中建立bookbar库，将mysql.sql导入到该库中
+	2，	更改ioc.js中数据库配置
+	3，	运行BootStrap.java启动项目，访问地址：http://localhost:8080	
  	
  
 文档下载
