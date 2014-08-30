@@ -26,9 +26,9 @@ public class Book {
 	private String descript;// 简介
 	@Column
 	private String url;
-	@Column
+	@Column("item_id")
 	private Long itemId;// 对应的采集器id
-	@Column
+	@Column("update_time")
 	private Date updateTime;// 采集更新日期
 	@Column
 	private String author;// 作者
@@ -36,16 +36,17 @@ public class Book {
 	private String translator;// 译者
 	@Column
 	private String publisher;// 出版社
-	@Column
+	@Column("publish_date")
 	private Date publishDate;// 出版日期
 	@Column
 	private String isbn;
 	@Column
 	private Float price;// 定价
-	@Column
+	@Column("shop_price")
 	private Float shopPrice;// 商城价
 	@Column
 	private Integer rank;// 排行榜
+	@Column("comment_count")
 	private Integer commentCount;// 评论数
 
 	public Long getId() {

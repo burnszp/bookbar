@@ -1,5 +1,9 @@
 package org.enilu.bookbar.service;
 
+import java.util.List;
+
+import org.enilu.bookbar.entity.Book;
+import org.nutz.dao.Cnd;
 
 /**
  * 
@@ -11,5 +15,8 @@ package org.enilu.bookbar.service;
  * 
  */
 public class BookService extends GeneralService {
+	public List<Book> queryByItemId(Long itemId) {
+		return dao.query(Book.class, Cnd.where("itemId", "=", itemId));
+	}
 
 }

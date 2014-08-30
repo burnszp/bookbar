@@ -10,6 +10,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.nutz.ioc.loader.annotation.IocBean;
 
 import com.google.common.collect.Lists;
 
@@ -23,6 +24,7 @@ import com.google.common.collect.Lists;
  * @author enilu(82552623@qq.com)
  * 
  */
+@IocBean
 public class DangdangCollector implements BookCollector {
 	@Override
 	public List<Book> collector(BookItem bookItem) {

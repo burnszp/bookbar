@@ -8,3 +8,6 @@
 	String ctx=request.getContextPath() ;
 	request.setAttribute("ctx", ctx) ;
 %>
+<script type="text/javascript">
+var ctx = '${ctx}';
+</script>
