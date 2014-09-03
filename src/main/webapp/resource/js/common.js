@@ -6,11 +6,25 @@ define(function(require, exports, module) {
 	require('jquery-ui');
 	require('juqery-ui_touch');
 	require('bootstrap');
-	require('bootstra-select');
+	require('bootstrap-select');
 	require('jquery-tagsinput');
 	require('jquery-placeholder');
-	
-	var $=jQuery;
+	require('typeahead');
+	require('application');
+	var $ = jQuery;
 	var flag = $('body').attr('flag');
 	$('li[flag="' + flag + '"]').addClass('active');
+	function Tooltip(container) {
+		this.container = $('#' + container);
+		console.log(this.container);
+	}
+
+	Tooltip.prototype.show = function(text) {
+		this.container.html(text);
+		this.container.show();
+	};
+	Tooltip.prototype.hide = function() {
+		this.container.hide();
+	};
+	module.exports = Tooltip;
 });

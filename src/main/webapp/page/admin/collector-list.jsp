@@ -14,20 +14,9 @@
 					<li><a href="/${ctx}">主页</a></li>
 					<li><a href="/${ctx}/admin/collector-list">后台管理</a></li>
 					<li class="active">采集器</li>
-					<div style="float: right; margin-top: -6px;">
-						<select name="info" class="mbn" style="display: none;">
-							<optgroup label="">
-								<option value="0" selected="selected">采集器</option>
-								<option value="1">書籍</option>
-								<option value="1">類別</option>
-							</optgroup>
-							<optgroup label="">
-								<option value="2">用戶</option>
-								<option value="3">評論</option>
-								<option value="4" class="highlighted">退出</option>
-							</optgroup>
-						</select>
-					</div>
+					<div class="alert alert-success" id="tooltip" role="alert" style="float:right;margin-top:-5px;height:40px;padding:5px;display:none">采集中......</div>
+					 
+					
 
 				</ol>
 
@@ -61,16 +50,21 @@
 								<tr>
 									<th>名称</th>
 									<th>采集器</th>
+									<th>采集时间</th>
+									<th>操作</th>
 								</tr>
 							</thead>
-							<c:forEach items="${obj}" var="item">
+							<c:forEach items="${page.list}" var="item">
 								<tr>
-									<td><a href="${item.url}" target="_blank">${item.name}</a></td>
+									<td><a href="${item.url}" target="_blank">${item.website}-${item.name}</a></td>
 									<td>${item.collector}</td>
-
+									<td><fmt:formatDate value="${item.updateTime}" pattern="yyyy-MM-dd hh:MM:ss"/></td>
+									<td><a href="#" class="collectorOne" itemid="${item.id}">采集</a></td>
+									
 								</tr>
 							</c:forEach>
 						</table>
+						<div class="pagination" id="page"></div>
 					</div>
 				</div>
 
@@ -80,6 +74,9 @@
 
 </body>
 <script type="text/javascript">
+var pageNumber = "${page.pager.pageNumber}";
+var pageSize = "${page.pager.pageSize}";
+var pageCount = "${page.pager.pageCount}";
 	seajs.use("admin/js/collector-list");
 </script>
 

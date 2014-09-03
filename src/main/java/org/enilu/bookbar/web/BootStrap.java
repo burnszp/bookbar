@@ -41,6 +41,7 @@ public class BootStrap {
 			throw new Exception("not find web app! in "
 					+ new File("").getAbsolutePath());
 		}
+		WebUtil.imgdir = bundle.getString("img_dir");
 
 		server = new Server();
 		QueuedThreadPool threadPool = new QueuedThreadPool();

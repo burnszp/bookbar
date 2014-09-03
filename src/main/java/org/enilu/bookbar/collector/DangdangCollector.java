@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.enilu.bookbar.entity.Book;
 import org.enilu.bookbar.entity.BookItem;
+import org.enilu.bookbar.web.WebUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -25,7 +26,7 @@ import com.google.common.collect.Lists;
  * 
  */
 @IocBean
-public class DangdangCollector implements BookCollector {
+public class DangdangCollector extends BookCollector {
 	@Override
 	public List<Book> collector(BookItem bookItem) {
 		try {
@@ -41,6 +42,16 @@ public class DangdangCollector implements BookCollector {
 				for (Element bookEl : bookEls) {
 					String rank = bookEl.getElementsByClass("list_num").get(0)
 							.text().replace(".", "");
+					String imgUrl = bookEl.getElementsByClass("pic").get(0)
+							.getElementsByTag("a").get(0)
+							.getElementsByTag("img").get(0).attr("src");
+
+					String imgName = WebUtil.imgdir
+							+ "dangdang/"
+							+ new Date().getTime()
+							+ "."
+							+ imgUrl.split("\\.")[imgUrl.split("\\.").length - 1];
+					downloadImg(imgUrl, imgName);
 					Element nameEl = bookEl.getElementsByClass("name").get(0)
 							.getElementsByTag("a").get(0);
 					String name = nameEl.text().trim();
@@ -77,7 +88,8 @@ public class DangdangCollector implements BookCollector {
 					book.setIsbn("");// 需要去详情页面采集
 					book.setItemId(bookItem.getId());
 					book.setName(name);
-					book.setPrice(Float.valueOf(price));
+
+					book.setPrice(Float.valueOf(price.replaceAll(",", "")));
 					if (publishDate != null && !"".equals(publishDate)) {
 						book.setPublishDate(sdf.parse(publishDate));
 					}

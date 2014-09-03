@@ -5,8 +5,8 @@ import java.util.List;
 import org.enilu.bookbar.collector.BookCollector;
 import org.enilu.bookbar.entity.Book;
 import org.enilu.bookbar.entity.BookItem;
-import org.enilu.bookbar.service.BookItemService;
 import org.enilu.bookbar.service.BookService;
+import org.enilu.bookbar.service.CollectorService;
 import org.nutz.ioc.Ioc2;
 import org.nutz.ioc.impl.NutIoc;
 import org.nutz.ioc.loader.annotation.AnnotationIocLoader;
@@ -23,8 +23,8 @@ public class CollectorJob implements Job {
 	public void execute(JobExecutionContext arg0) throws JobExecutionException {
 		System.out.println("collector job start work");
 		Ioc2 ioc = new NutIoc(new AnnotationIocLoader("org.enilu.bookbar"));
-		BookItemService bookItemService = ioc.get(BookItemService.class);
-		List<BookItem> cfgs = bookItemService.query();
+		CollectorService collectorService = ioc.get(CollectorService.class);
+		List<BookItem> cfgs = collectorService.query();
 		BookService bookService = ioc.get(BookService.class);
 		for (BookItem cfg : cfgs) {
 			try {

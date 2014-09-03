@@ -16,7 +16,7 @@
 <!-- Loading Flat UI -->
 <link href="${ctx}/resource/flat-ui/2.1.3/css/flat-ui.css"
 	rel="stylesheet">
-<link href="${ctx}/resource/flat-ui/2.1.3/css/docs.css" rel="stylesheet">
+<link href="${ctx}/resource/flat-ui/2.1.3/css/demo2.css" rel="stylesheet">
 
 <link rel="shortcut icon"
 	href="${ctx}/resource/flat-ui/2.1.3/images/favicon.ico">
@@ -72,23 +72,26 @@
 				 "jquery-ui":"flat-ui/2.1.3/js/jquery-ui-1.10.3.custom.min.js",
 				 "juqery-ui_touch":"flat-ui/2.1.3/js/jquery.ui.touch-punch.min.js",
 				 "bootstrap":"flat-ui/2.1.3/js/bootstrap.min.js",
-				 "bootstra-select":"flat-ui/2.1.3/js/bootstrap-select.js",
+				 "bootstrap-select":"flat-ui/2.1.3/js/bootstrap-select.js",
 				 "jquery-tagsinput":"flat-ui/2.1.3/js/jquery.tagsinput.js",
 				 "jquery-placeholder":"flat-ui/2.1.3/js/jquery.placeholder.js",
+				 "typeahead":"flat-ui/2.1.3/js/typeahead.js",
+				 "application":"flat-ui/2.1.3/js/application.js",
 			 
 			}
 		});
-		 
 		// 加载入口模块
 		seajs.use("${ctx}/resource/js/common"); 
 	</script>
-	<!-- 类似百度搜索的自动完成autocomplete库 
+	
+	<script src="${ctx}/resource/flat-ui/2.1.3/js/jquery-1.10.2.min.js"></script>
+	<!-- 类似百度搜索的自动完成autocomplete库  common.js引用
     <script src="${ctx}/resource/flat-ui/2.1.3/js/typeahead.js"></script>
-    -->
-	<!--语法高亮库
+   -->
+	<!--语法高亮库-->
     <script src="${ctx}/resource/flat-ui/2.1.3/bootstrap/js/google-code-prettify/prettify.js"></script>
     
-	<script src="${ctx}/resource/flat-ui/2.1.3/js/application.js"></script> -->
+	<script src="${ctx}/resource/flat-ui/2.1.3/js/application.js"></script> 
 	  
 </body>
 </html>

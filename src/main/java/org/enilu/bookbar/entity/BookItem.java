@@ -24,13 +24,13 @@ public class BookItem {
 	private String url;
 	@Column
 	private String collector;
-	@Column
+	@Column("data_option")
 	private String dataOption;
 	@Column
 	private String website;
 	@Column
 	private String descript;
-	@Column
+	@Column("update_time")
 	private Date updateTime;
 
 	public Long getId() {
