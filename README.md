@@ -12,10 +12,10 @@ bookbar 书吧
 	
 主要技术：
 -----------------
-	1，nutz，使用nutz做基本的框架，用作dao，mvc
-	2，jsoup，使用jsoup负责进行信息抓取
+	1，使用[nutz](<https://github.com/nutzam/nutz>)做基本的技术框架，主要用了NutzDao和NutzMVC
+	2，使用[jsoup](<http://jsoup.org/>)负责进行信息抓取
 	3，使用jetty做为内置服务器	
-	4，后期通过lucene提供书籍的快速搜索功能
+	4，前台使用[flat-ui](<http://www.bootcss.com/p/flat-ui/>)做级别界面框架，使用[seajs](<http://seajs.org/docs/>)组织js代码
 
 快速使用：
 -----------------
