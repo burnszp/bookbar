@@ -88,7 +88,7 @@ public class DangdangCollector extends BookCollector {
 					book.setIsbn("");// 需要去详情页面采集
 					book.setItemId(bookItem.getId());
 					book.setName(name);
-
+					book.setImg(imgName);
 					book.setPrice(Float.valueOf(price.replaceAll(",", "")));
 					if (publishDate != null && !"".equals(publishDate)) {
 						book.setPublishDate(sdf.parse(publishDate));

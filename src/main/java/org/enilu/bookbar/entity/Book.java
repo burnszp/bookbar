@@ -48,6 +48,8 @@ public class Book {
 	private Integer rank;// 排行榜
 	@Column("comment_count")
 	private Integer commentCount;// 评论数
+	@Column
+	private String img;// 图片路径
 
 	public Long getId() {
 		return id;
@@ -167,6 +169,14 @@ public class Book {
 
 	public void setPublishDate(Date publishDate) {
 		this.publishDate = publishDate;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
 	}
 
 }
