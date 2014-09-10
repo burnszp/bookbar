@@ -26,12 +26,12 @@ bookbar 书吧
 
 效果截图
 -----------------
-	首页：
-	(img/1.png)
-	分类浏览：
-	(img/2.png)
-	后台管理：
-	(img/3.png)
+	[首页：]
+##![](img/1.png?raw=true)
+	[分类浏览：]
+##![](img/2.png?raw=true)
+	[后台管理：]
+##![](img/3.png?raw=true)
 
 
 交流、反馈和建议
