@@ -10,12 +10,12 @@ bookbar 书吧
 	1，通过聚合网上书籍相关销售量，点击量，评论等信息降低用户找书的难度。
 
 	
-主要技术：
+#主要技术：
 -----------------
-##使用[nutz](<https://github.com/nutzam/nutz>)做基本的技术框架，主要用了NutzDao和NutzMVC
-##使用[jsoup](<http://jsoup.org/>)负责进行信息抓取
-##使用jetty做为内置服务器	
-##前台使用[flat-ui](<http://www.bootcss.com/p/flat-ui/>)做级别界面框架，使用[seajs](<http://seajs.org/docs/>)组织js代码
+*使用[nutz](<https://github.com/nutzam/nutz>)做基本的技术框架，主要用了NutzDao和NutzMVC
+*使用[jsoup](<http://jsoup.org/>)负责进行信息抓取
+*使用jetty做为内置服务器	
+*前台使用[flat-ui](<http://www.bootcss.com/p/flat-ui/>)做级别界面框架，使用[seajs](<http://seajs.org/docs/>)组织js代码
 
 快速使用：
 -----------------
