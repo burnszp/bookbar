@@ -35,11 +35,11 @@
 				data-target="#navbar-collapse-01">
 				<span class="sr-only"></span>
 			</button>
-			<a class="navbar-brand" href="/${ctx}">书吧</a>
+			<a class="navbar-brand" href="${ctx}/index">书吧</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse-01">
 			<ul class="nav navbar-nav">
-				<li flag="index"><a href="/${ctx}">新书推荐</a></li>
+				<li flag="index"><a href="${ctx}/index">新书推荐</a></li>
 				<li flag="type"><a href="${ctx}/front/book-type">分类</a></li>
 				<li flag="my"><a href="#">我的书架</a></li>
 				<li flag="admin"><a href="${ctx}/admin/collector-list">后台管理</a></li>
