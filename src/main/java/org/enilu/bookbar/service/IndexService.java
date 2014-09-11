@@ -19,17 +19,18 @@ public class IndexService extends GeneralService {
 
 	public List<Book> queryTopBook() {
 
-		List<Book> list = dao.query(Book.class,
-				Cnd.NEW().orderBy("commentCount", "desc"),
-				dao.createPager(1, 16));
+		List<Book> list = dao
+				.query(Book.class, Cnd.wrap("ORDER BY comment_count desc"),
+						dao.createPager(1, 16));
+
 		return list;
 
 	}
 
 	public Object queryPopularBook() {
-		List<Book> list = dao.query(Book.class,
-				Cnd.NEW().orderBy("commentCount", "desc"),
-				dao.createPager(1, 16));
+		List<Book> list = dao
+				.query(Book.class, Cnd.wrap("ORDER BY comment_count desc"),
+						dao.createPager(1, 16));
 		return list;
 
 	}

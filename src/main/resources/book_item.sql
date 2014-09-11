@@ -8,5 +8,4 @@ insert into book_item(name,url,collector,website) values('艺术','http://bang.d
 insert into book_item(name,url,collector,website) values('动漫/幽默','http://bang.dangdang.com/books/bestsellers/01.09.00.00.00.00-recent30-0-0-1-{page}','org.enilu.bookbar.collector.DangdangCollector','当当网');
 insert into book_item(name,url,collector,website) values('烹饪/美食','http://bang.dangdang.com/books/bestsellers/01.10.00.00.00.00-recent30-0-0-1-{page}','org.enilu.bookbar.collector.DangdangCollector','当当网');
 insert into book_item(name,url,collector,website) values('时尚/美妆','http://bang.dangdang.com/books/bestsellers/01.11.00.00.00.00-recent30-0-0-1-{page}','org.enilu.bookbar.collector.DangdangCollector','当当网');
-insert into book_item(name,url,collector,website) values('总榜','http://bang.dangdang.com/books/bestsellers/01.00.00.00.00.00-24hours-0-0-1-{page}','org.enilu.bookbar.collector.DangdangCollector','当当网');
 
