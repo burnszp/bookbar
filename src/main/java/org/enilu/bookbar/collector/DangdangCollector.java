@@ -1,5 +1,6 @@
 package org.enilu.bookbar.collector;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -30,6 +31,10 @@ public class DangdangCollector extends BookCollector {
 	@Override
 	public List<Book> collector(BookItem bookItem) {
 		try {
+			File imgDic = new File(WebUtil.imgdir + "dangdang/");
+			if (!imgDic.exists()) {
+				imgDic.mkdir();
+			}
 			List<Book> list = Lists.newArrayList();
 			String collectorUrl = bookItem.getUrl();
 			for (int i = 1; i <= 25; i++) {

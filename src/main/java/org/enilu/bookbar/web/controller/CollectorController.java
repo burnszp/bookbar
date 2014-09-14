@@ -69,4 +69,16 @@ public class CollectorController {
 		map.put("status", "ok");
 		return Json.toJson(map);
 	}
+
+	/**
+	 * 跳转至添加解密那
+	 * 
+	 * @param request
+	 * @return
+	 */
+	@At("/admin/collectoredit/")
+	@Ok("jsp:/page/admin/collector-edit.jsp")
+	public BookItem toEdit(HttpServletRequest request) {
+		return null;
+	}
 }

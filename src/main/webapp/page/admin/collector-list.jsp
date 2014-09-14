@@ -36,7 +36,7 @@
 								<span class="dropdown-arrow dropdown-arrow-inverse"></span>
 								<ul class="dropdown-menu dropdown-inverse">
 									<li><a href="#" id="collectAll">采集全部</a></li>
-									<li><a href="#fakelink">新增</a></li>
+									<li><a href="${ctx}/admin/collectoredit">新增</a></li>
 									<li><a href="#fakelink">編輯</a></li>
 									<li><a href="#fakelink">刪除</a></li>
 								</ul>
